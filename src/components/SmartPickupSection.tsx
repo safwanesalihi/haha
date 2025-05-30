@@ -1,149 +1,76 @@
+import { scrollToContact } from '@/utils/scrollUtils';
+import { SectionWrapper } from './SectionWrapper';
 
 const SmartPickupSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
-      <div className="section-container">
-        <div className="text-center mb-16 reveal-animation">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-6">
-            <i className="fas fa-truck-loading text-4xl text-blue-700"></i>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-6">
-            Ramassage ذكي منين ما كنتي
-          </h2>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-8 reveal-animation">
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-3xl font-bold text-blue-800 mb-6 text-center">
-                كنخدو الطلبات من دارك
-              </h3>
-
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4 space-x-reverse p-6 bg-blue-50 rounded-xl">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold animate-pulse-scale">
-                    1
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-blue-800">طلبية واحدة فقط</h4>
-                    <p className="text-blue-600">في المدن الكبيرة</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4 space-x-reverse p-6 bg-blue-100 rounded-xl">
-                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold animate-pulse-scale delay-300">
-                    10
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-blue-800">10 طلبيات</h4>
-                    <p className="text-blue-600">في الجهات الأخرى</p>
-                  </div>
-                </div>
+    <SectionWrapper
+      index={3} // Fourth section (index 3)
+      title="استلام ذكي للطلبيات"
+      image="/lovable-uploads/7427-smart-pickup.png"
+      imageAlt="BMD Smart Pickup"
+      ctaText="جرب الخدمة الآن"
+      ctaAction={scrollToContact}
+      additionalContent={
+        <div className="bg-white rounded-3xl p-8 shadow-xl mt-8">
+          <h3 className="text-2xl font-bold text-primary mb-6">مميزات الاستلام الذكي</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="flex items-start space-x-4 space-x-reverse">
+              <div className="bg-blue-100 p-3 rounded-full">
+                <i className="fas fa-check text-blue-600"></i>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg text-primary">استلام من أي مكان</h4>
+                <p className="text-gray-600">كنجيو نستلمو من عندك فين ما كنتي</p>
               </div>
             </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-blue-800 mb-6 text-center">
-                خدمات إضافية
-              </h3>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <i className="fas fa-box-open text-3xl text-blue-600 mb-2"></i>
-                  <p className="font-medium text-blue-800">تغليف</p>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <i className="fas fa-tags text-3xl text-blue-500 mb-2"></i>
-                  <p className="font-medium text-blue-800">تيتيماج</p>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <i className="fas fa-clipboard-check text-3xl text-blue-700 mb-2"></i>
-                  <p className="font-medium text-blue-800">تحضير</p>
-                </div>
-                <div className="text-center p-4 bg-blue-50 rounded-xl">
-                  <i className="fas fa-warehouse text-3xl text-blue-600 mb-2"></i>
-                  <p className="font-medium text-blue-800">جمع المخزون</p>
-                </div>
+            
+            <div className="flex items-start space-x-4 space-x-reverse">
+              <div className="bg-blue-100 p-3 rounded-full">
+                <i className="fas fa-check text-blue-600"></i>
               </div>
-
-              <div className="mt-6 p-4 bg-gradient-to-l from-blue-100 to-blue-200 rounded-xl text-center">
-                <p className="text-lg font-bold text-blue-800">كامل علينا!</p>
+              <div>
+                <h4 className="font-bold text-lg text-primary">تتبع مباشر</h4>
+                <p className="text-gray-600">تتبع الطلبية ديالك لحظة بلحظة</p>
               </div>
             </div>
-          </div>
-
-          {/* Process Visualization */}
-          <div className="reveal-animation">
-            <div className="bg-white rounded-3xl p-8 shadow-2xl">
-              <h3 className="text-2xl font-bold text-blue-800 mb-8 text-center">عملية الجمع الذكي</h3>
-              
-              <div className="space-y-8">
-                {/* Step 1 */}
-                <div className="flex items-center space-x-6 space-x-reverse">
-                  <div className="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl font-bold animate-bounce">
-                    1
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-bold text-blue-800 mb-2">طلب الجمع</h4>
-                    <p className="text-blue-600">تتصل بينا أو تدير الطلب عبر الموقع</p>
-                  </div>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <i className="fas fa-phone text-2xl text-blue-600"></i>
-                  </div>
-                </div>
-
-                {/* Arrow */}
-                <div className="flex justify-center">
-                  <i className="fas fa-arrow-down text-2xl text-blue-300 animate-bounce"></i>
-                </div>
-
-                {/* Step 2 */}
-                <div className="flex items-center space-x-6 space-x-reverse">
-                  <div className="flex-shrink-0 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl font-bold animate-bounce delay-300">
-                    2
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-bold text-blue-800 mb-2">الجمع من دارك</h4>
-                    <p className="text-blue-600">فريقنا كيجي يجمع الطلبات من عندك</p>
-                  </div>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <i className="fas fa-truck-loading text-2xl text-blue-500"></i>
-                  </div>
-                </div>
-
-                {/* Arrow */}
-                <div className="flex justify-center">
-                  <i className="fas fa-arrow-down text-2xl text-blue-300 animate-bounce"></i>
-                </div>
-
-                {/* Step 3 */}
-                <div className="flex items-center space-x-6 space-x-reverse">
-                  <div className="flex-shrink-0 w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center text-white text-xl font-bold animate-bounce delay-500">
-                    3
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-lg font-bold text-blue-800 mb-2">تحضير وتوصيل</h4>
-                    <p className="text-blue-600">كنحضرو ونوصلو للزبناء ديالك</p>
-                  </div>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
-                    <i className="fas fa-shipping-fast text-2xl text-blue-700"></i>
-                  </div>
-                </div>
+            
+            <div className="flex items-start space-x-4 space-x-reverse">
+              <div className="bg-blue-100 p-3 rounded-full">
+                <i className="fas fa-check text-blue-600"></i>
               </div>
-
-              <div className="mt-8 text-center">
-                <img 
-                  src="/lovable-uploads/71918f0e-027b-48bf-a58c-a37f5d8a5708.png" 
-                  alt="BMD Smart Pickup"
-                  className="w-full h-48 object-cover rounded-2xl"
-                />
+              <div>
+                <h4 className="font-bold text-lg text-primary">إشعارات فورية</h4>
+                <p className="text-gray-600">إشعارات بكل تغيير في حالة الطلبية</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-4 space-x-reverse">
+              <div className="bg-blue-100 p-3 rounded-full">
+                <i className="fas fa-check text-blue-600"></i>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg text-primary">جدولة مسبقة</h4>
+                <p className="text-gray-600">حدد وقت الاستلام اللي كيناسبك</p>
               </div>
             </div>
           </div>
         </div>
+      }
+    >
+      <div>
+        <p className="mb-4">
+          مع BMD، ماغاديش تضطر تنقل البضائع ديالك للمخزن ديالنا. احنا كنجيو عندك فين ما كنتي.
+        </p>
+        
+        <p className="mb-4">
+          كنوفرو خدمة استلام ذكية كتمكنك من تتبع الطلبية ديالك من لحظة الاستلام حتى التوصيل.
+        </p>
+        
+        <p>
+          غير حدد الوقت والمكان اللي كيناسبك، واحنا غادي نجيو ناخدو البضائع ديالك بكل احترافية.
+        </p>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

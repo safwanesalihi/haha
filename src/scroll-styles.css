@@ -1,0 +1,33 @@
+/* Add this to index.css to ensure button contrast and mobile scrolling */
+@layer components {
+  /* Button contrast styles */
+  .btn-on-blue {
+    @apply bg-white text-blue-700 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-on-white {
+    @apply bg-blue-600 text-white hover:bg-blue-700 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  /* Mobile scrolling styles */
+  .scroll-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+  }
+}
+
+/* Mobile-first scrolling container */
+@media (max-width: 768px) {
+  html, body {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
